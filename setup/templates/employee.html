@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form-container {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1pc solid #ccc;
+            border-radius: 5px;
+            background-color: aquamarine;
+        }
+
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+    input {
+        margin-bottom: 10px;
+        padding: 8px;
+        font-size: 16px;
+    }
+    textarea, label{
+        font-size: 16px;
+    }
+    a{
+        font-size: 30px;
+
+    }
+    </style>
+
+</head>
+<body>
+        
+<div class="form-container">
+    <h1>Employee information</h1>
+    <form method="post">
+
+        {% csrf_token %}
+        <label>name</label><br>
+        <input type="text" name="name" placeholder="enter your name"><br>
+        <label>email</label><br>
+        <input type="text" name="email" placeholder="enter your email"><br>
+        <label>phone</label><br>
+        <input type="text" name="phone" placeholder="enter your phone"><br>
+        <label>address</label><br>
+        <textarea name="address" placeholder="enter your address"></textarea><br>
+        <input type="submit" value="save">
+
+
+
+    </form>
+</div>
+</body>
+</html>
